@@ -1,4 +1,4 @@
-import { speechToText } from "https://unpkg.com/speech-into-text@1.4.4/index.js";
+import { speechToText } from "https://unpkg.com/speech-into-text@1.5.1/index.js";
 
 const voiceTyping = document.getElementById("voiceTyping");
 let Clicked = true;
