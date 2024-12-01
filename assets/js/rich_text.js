@@ -1381,19 +1381,19 @@ document.addEventListener("keydown", function (e) {
       e.preventDefault();
     }
   }
-  // if (
-  //   ((e.ctrlKey || e.metaKey) &&
-  //     e.shiftKey &&
-  //     (e.key === "i" || e.key === "I")) ||
-  //   (e.metaKey && e.shiftKey && (e.key === "i" || e.key === "I")) ||
-  //   (e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) ||
-  //   (e.metaKey && e.shiftKey && (e.key === "i" || e.key === "I")) ||
-  //   (e.metaKey && e.altKey && (e.key === "i" || e.key === "I")) ||
-  //   e.key === "F12"
-  // ) {
-  //   e.preventDefault();
-  //    saveDocument(e);
-  // }
+  if (
+    ((e.ctrlKey || e.metaKey) &&
+      e.shiftKey &&
+      (e.key === "i" || e.key === "I")) ||
+    (e.metaKey && e.shiftKey && (e.key === "i" || e.key === "I")) ||
+    (e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) ||
+    (e.metaKey && e.shiftKey && (e.key === "i" || e.key === "I")) ||
+    (e.metaKey && e.altKey && (e.key === "i" || e.key === "I")) ||
+    e.key === "F12"
+  ) {
+    e.preventDefault();
+     saveDocument(e);
+  }
 
   if (e.key === "f" && e.ctrlKey) {
     findReplace.click();
