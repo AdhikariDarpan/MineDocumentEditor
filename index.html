@@ -45,6 +45,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <title>Mero Document</title>
   </head>
+  <style>
+    .listening {
+        animation: pulse 1s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          border-color: var(--sky-blue);
+          box-shadow: 0 0 10px var(--sky-blue);
+        }
+        50% {
+          border-color: var(--light-green);
+          box-shadow: 0 0 20px var(--light-green);
+        }
+      }
+  </style>
   <body>
     <div id="dialogOverlay" class="dialog-overlay">
       <div id="dialogBox" class="dialog-box">
@@ -253,7 +269,7 @@
           <i class="fas fa-search"></i>
           <span class="tooltiptext">Search Text</span>
         </button>
-        <button class="tooltip no-border" id="voiceTyping">
+        <button class="tooltip no-border indicator" id="voiceTyping">
           <span>🎙️</span>
           <span class="tooltiptext">Voice Typing</span>
         </button>
